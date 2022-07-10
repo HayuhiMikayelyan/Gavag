@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:padding="8dp"
+    android:background="@color/page_bg">
+
+
+    <ImageView
+        android:id="@+id/icon_gavag"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars"
+        android:layout_margin="5dp"/>
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/icon_gavag"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <View
+                android:id="@+id/view_state"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:background="@drawable/content_background"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/switch_on_off" />
+
+            <TextView
+                android:id="@+id/tv_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/state"
+                android:textSize="32sp"
+                android:textColor="@color/text_color"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="12dp"
+                app:layout_constraintTop_toTopOf="@id/view_state"
+                app:layout_constraintStart_toStartOf="@id/view_state"
+                />
+
+            <Switch
+                android:id="@+id/switch_on_off"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:drawableTintMode="@color/main_color"
+                android:minHeight="48dp"
+                android:scaleX="1.5"
+                android:scaleY="1.5"
+                app:layout_constraintEnd_toEndOf="@id/view_state"
+                app:layout_constraintStart_toStartOf="@id/view_state"
+                app:layout_constraintTop_toBottomOf="@id/tv_state"
+                tools:ignore="UseSwitchCompatOrMaterialXml"
+                android:paddingBottom="16dp"/>
+
+            <TextView
+                android:id="@+id/tv_off"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/off"
+                android:textColor="@color/text_color"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@id/view_state"
+                app:layout_constraintTop_toTopOf="@id/switch_on_off"
+                app:layout_constraintEnd_toStartOf="@id/switch_on_off" />
+
+            <TextView
+                android:id="@+id/tv_on"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/on"
+                android:textColor="@color/text_color"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="@id/view_state"
+                app:layout_constraintTop_toTopOf="@id/switch_on_off"
+                app:layout_constraintStart_toEndOf="@id/switch_on_off"
+                />
+
+            <View
+                android:id="@+id/view_settings"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:background="@drawable/content_background"
+                app:layout_constraintTop_toBottomOf="@id/view_state"
+                android:layout_marginTop="16dp"
+                app:layout_constraintHeight_percent="0.35"
+                />
+
+            <TextView
+                android:id="@+id/tv_settings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/settings"
+                android:textSize="24sp"
+                android:textColor="@color/text_color"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toTopOf="@id/view_settings"
+                app:layout_constraintStart_toStartOf="@id/view_settings"
+                app:layout_constraintEnd_toEndOf="@id/view_settings"
+                />
+
+            <CheckBox
+                android:id="@+id/tv_mask"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/mask"
+                app:layout_constraintStart_toStartOf="@id/view_settings"
+                app:layout_constraintTop_toBottomOf="@id/tv_settings"
+                android:textSize="18sp"/>
+            <CheckBox
+                android:id="@+id/tv_qr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/qr_access"
+                app:layout_constraintStart_toStartOf="@id/view_settings"
+                app:layout_constraintTop_toBottomOf="@id/tv_mask"
+                android:textSize="18sp"/>
+            <CheckBox
+                android:id="@+id/tv_save_photos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/save_unmasked_people_s_photos"
+                app:layout_constraintStart_toStartOf="@id/view_settings"
+                app:layout_constraintTop_toBottomOf="@id/tv_qr"
+                android:textSize="18sp"/>
+
+            <CheckBox
+                android:id="@+id/tv_save_qrs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/save_fake_qr_photos"
+                app:layout_constraintStart_toStartOf="@id/view_settings"
+                app:layout_constraintTop_toBottomOf="@id/tv_save_photos"
+                android:textSize="18sp" />
+
+
+            <View
+                android:id="@+id/view_nearest_events"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:background="@drawable/content_background"
+                app:layout_constraintTop_toBottomOf="@id/view_settings"
+                android:layout_marginTop="16dp"
+                app:layout_constraintHeight_percent="0.25"
+                />
+            <TextView
+                android:id="@+id/tv_events"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/nearest_events"
+                android:textSize="24sp"
+                android:textColor="@color/text_color"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toTopOf="@id/view_nearest_events"
+                app:layout_constraintStart_toStartOf="@id/view_settings"
+                app:layout_constraintEnd_toEndOf="@id/view_settings"
+                />
+            <TextView
+                android:id="@+id/tv_event_date"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:hint="NULL|0000-00-00 00:00"
+                app:layout_constraintTop_toBottomOf="@id/tv_events"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:padding="10dp"
+                android:background="@drawable/text_background"
+                android:layout_marginHorizontal="16dp"/>
+
+            <View
+                android:id="@+id/view_info"
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:background="@drawable/content_background"
+                app:layout_constraintTop_toBottomOf="@id/view_nearest_events"
+                android:layout_marginTop="16dp"
+                />
+
+
+
+            <View
+                android:id="@+id/view_1"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/text_background"
+                app:layout_constraintTop_toTopOf="@id/tv_1"
+                app:layout_constraintStart_toStartOf="@id/tv_1"
+                app:layout_constraintEnd_toEndOf="@id/tv_1"
+                android:padding="8dp"
+                app:layout_constraintBottom_toBottomOf="@id/tv_description_1"/>
+
+            <View
+                android:id="@+id/view_2"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/text_background"
+                app:layout_constraintTop_toTopOf="@id/tv_2"
+                app:layout_constraintStart_toStartOf="@id/tv_2"
+                app:layout_constraintEnd_toEndOf="@id/tv_2"
+                android:padding="8dp"
+                app:layout_constraintBottom_toBottomOf="@id/tv_description_2"/>
+
+            <androidx.constraintlayout.helper.widget.Flow
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:constraint_referenced_ids="tv_1,tv_2"
+                app:layout_constraintTop_toTopOf="@id/view_info"
+                app:layout_constraintStart_toStartOf="@id/view_info"
+                app:layout_constraintEnd_toEndOf="@id/view_info"
+                app:flow_horizontalGap="18dp"
+                android:padding="8dp"/>
+
+            <TextView
+                android:id="@+id/tv_1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:gravity="center"
+                android:text="0"
+                android:paddingTop="18dp"
+                android:textColor="@color/black"
+                />
+
+            <TextView
+                android:id="@+id/tv_2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:text="0"
+                android:gravity="center"
+                android:paddingTop="18dp"
+                android:textColor="@color/text_color"
+                />
+
+            <TextView
+                android:id="@+id/tv_description_1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="@string/not_entered_this_session"
+                android:gravity="center"
+                app:layout_constraintTop_toBottomOf="@id/tv_1"
+                app:layout_constraintStart_toStartOf="@id/view_1"
+                app:layout_constraintEnd_toEndOf="@id/view_1"
+                android:paddingBottom="18dp"
+                />
+
+            <TextView
+                android:id="@+id/tv_description_2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="@string/attempts_this_session"
+                android:gravity="center"
+                app:layout_constraintTop_toBottomOf="@id/tv_2"
+                app:layout_constraintStart_toStartOf="@id/tv_2"
+                app:layout_constraintEnd_toEndOf="@id/tv_2"
+                android:paddingBottom="18dp"/>
+
+            <!--
+
+            <androidx.constraintlayout.helper.widget.Flow
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:constraint_referenced_ids="tv_description_1,tv_description_2"
+                app:layout_constraintTop_toTopOf="@id/view_info"
+                app:layout_constraintStart_toStartOf="@id/view_info"
+                app:layout_constraintEnd_toEndOf="@id/view_info"
+                app:flow_horizontalGap="24dp"
+                android:padding="16dp"/>
+
+
+            -->
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Gavag</string>
+    <string name="state">State</string>
+    <string name="on">On</string>
+    <string name="off">Off</string>
+    <string name="settings">Settings</string>
+    <string name="mask">Mask access</string>
+    <string name="qr_access">QR access</string>
+    <string name="save_fake_qr_photos">Save fake QR photos</string>
+    <string name="save_unmasked_people_s_photos">Save unmasked people\'s photos</string>
+    <string name="nearest_events">Nearest events</string>
+    <string name="attempts_this_session">Attempts | This session</string>
+    <string name="not_entered_this_session">Not entered | This session</string>
+</resources>
