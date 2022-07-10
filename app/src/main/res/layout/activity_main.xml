@@ -133,6 +133,7 @@
                 app:layout_constraintStart_toStartOf="@id/view_settings"
                 app:layout_constraintTop_toBottomOf="@id/tv_mask"
                 android:textSize="18sp"/>
+
             <CheckBox
                 android:id="@+id/tv_save_photos"
                 android:layout_width="wrap_content"
@@ -162,6 +163,7 @@
                 app:layout_constraintTop_toBottomOf="@id/view_settings"
                 android:layout_marginTop="16dp"
                 app:layout_constraintHeight_percent="0.25"
+
                 />
             <TextView
                 android:id="@+id/tv_events"
@@ -192,15 +194,30 @@
             <View
                 android:id="@+id/view_info"
                 android:layout_width="0dp"
-                android:layout_height="150dp"
+                android:layout_height="0dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 android:background="@drawable/content_background"
                 app:layout_constraintTop_toBottomOf="@id/view_nearest_events"
                 android:layout_marginTop="16dp"
+                app:layout_constraintBottom_toBottomOf="@id/view_guide_line"
                 />
 
 
+
+            <androidx.constraintlayout.helper.widget.Flow
+                android:id="@+id/flow_1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:constraint_referenced_ids="tv_1,tv_2"
+                app:layout_constraintTop_toTopOf="@id/view_info"
+                app:layout_constraintStart_toStartOf="@id/view_info"
+                app:layout_constraintEnd_toEndOf="@id/view_info"
+                app:flow_horizontalGap="18dp"
+                android:padding="8dp"
+                android:layout_marginTop="16dp"
+                />
 
             <View
                 android:id="@+id/view_1"
@@ -222,18 +239,7 @@
                 app:layout_constraintStart_toStartOf="@id/tv_2"
                 app:layout_constraintEnd_toEndOf="@id/tv_2"
                 android:padding="8dp"
-                app:layout_constraintBottom_toBottomOf="@id/tv_description_2"/>
-
-            <androidx.constraintlayout.helper.widget.Flow
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                app:constraint_referenced_ids="tv_1,tv_2"
-                app:layout_constraintTop_toTopOf="@id/view_info"
-                app:layout_constraintStart_toStartOf="@id/view_info"
-                app:layout_constraintEnd_toEndOf="@id/view_info"
-                app:flow_horizontalGap="18dp"
-                android:padding="8dp"/>
+                app:layout_constraintBottom_toBottomOf="@id/view_1"/>
 
             <TextView
                 android:id="@+id/tv_1"
@@ -269,7 +275,6 @@
                 app:layout_constraintEnd_toEndOf="@id/view_1"
                 android:paddingBottom="18dp"
                 />
-
             <TextView
                 android:id="@+id/tv_description_2"
                 android:layout_width="0dp"
@@ -282,21 +287,178 @@
                 app:layout_constraintEnd_toEndOf="@id/tv_2"
                 android:paddingBottom="18dp"/>
 
-            <!--
 
             <androidx.constraintlayout.helper.widget.Flow
+                android:id="@+id/flow_2"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                app:constraint_referenced_ids="tv_description_1,tv_description_2"
-                app:layout_constraintTop_toTopOf="@id/view_info"
-                app:layout_constraintStart_toStartOf="@id/view_info"
-                app:layout_constraintEnd_toEndOf="@id/view_info"
-                app:flow_horizontalGap="24dp"
-                android:padding="16dp"/>
+                app:constraint_referenced_ids="tv_3,tv_4"
+                app:layout_constraintTop_toBottomOf="@id/view_1"
+                app:layout_constraintStart_toStartOf="@id/flow_1"
+                app:layout_constraintEnd_toEndOf="@id/flow_1"
+                android:layout_marginTop="16dp"
+                app:flow_horizontalGap="18dp"
+                android:padding="8dp"/>
+
+            <View
+                android:id="@+id/view_3"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/text_background"
+                app:layout_constraintTop_toTopOf="@id/tv_3"
+                app:layout_constraintStart_toStartOf="@id/tv_3"
+                app:layout_constraintEnd_toEndOf="@id/tv_3"
+                android:padding="8dp"
+                app:layout_constraintBottom_toBottomOf="@id/tv_description_3"/>
+
+            <View
+                android:id="@+id/view_4"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/text_background"
+                app:layout_constraintTop_toTopOf="@id/tv_4"
+                app:layout_constraintStart_toStartOf="@id/tv_4"
+                app:layout_constraintEnd_toEndOf="@id/tv_4"
+                android:padding="8dp"
+                app:layout_constraintBottom_toBottomOf="@id/view_3"
+                />
+
+            <TextView
+                android:id="@+id/tv_3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:gravity="center"
+                android:text="0"
+                android:paddingTop="18dp"
+                android:textColor="@color/black"
+                />
+
+            <TextView
+                android:id="@+id/tv_4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:text="0"
+                android:gravity="center"
+                android:paddingTop="18dp"
+                android:textColor="@color/text_color"
+                />
+
+            <TextView
+                android:id="@+id/tv_description_3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="@string/not_entered_total"
+                android:gravity="center"
+                app:layout_constraintTop_toBottomOf="@id/tv_3"
+                app:layout_constraintStart_toStartOf="@id/view_3"
+                app:layout_constraintEnd_toEndOf="@id/view_3"
+                android:paddingBottom="18dp"
+                />
+
+            <TextView
+                android:id="@+id/tv_description_4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="@string/attempts_total"
+                android:gravity="center"
+                app:layout_constraintTop_toBottomOf="@id/tv_4"
+                app:layout_constraintStart_toStartOf="@id/tv_4"
+                app:layout_constraintEnd_toEndOf="@id/tv_4"
+                android:paddingBottom="18dp"/>
+
+            <View
+                android:id="@+id/view_guide_line"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/view_4"
+                app:layout_constraintStart_toStartOf="@id/view_3"
+                android:layout_marginTop="16dp"/>
+
+            <View
+                android:id="@+id/view_info_2"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:background="@drawable/content_background"
+                app:layout_constraintTop_toBottomOf="@id/view_info"
+                android:layout_marginTop="16dp"
+                app:layout_constraintBottom_toBottomOf="@id/img_insta"
+                />
+
+            <TextView
+                android:id="@+id/tv_gavag_lab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:text="@string/gavag_lab_2021_2022"
+                android:textColor="@color/text_color"
+                app:layout_constraintTop_toTopOf="@id/view_info_2"
+                app:layout_constraintStart_toStartOf="@id/view_1"
+                app:layout_constraintEnd_toEndOf="@id/view_2"
+                android:layout_marginTop="16dp"
+                />
+
+            <TextView
+                android:id="@+id/tv_sp_armath"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:text="@string/sponsored_by_armath"
+                android:textColor="@color/text_color"
+                app:layout_constraintTop_toBottomOf="@id/tv_gavag_lab"
+                app:layout_constraintStart_toStartOf="@id/tv_gavag_lab"
+                app:layout_constraintEnd_toEndOf="@id/tv_gavag_lab"
+                android:layout_marginTop="8dp"
+                />
+
+            <TextView
+                android:id="@+id/tv_social"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:text="@string/social_media"
+                android:textColor="@color/text_color"
+                app:layout_constraintTop_toBottomOf="@id/tv_sp_armath"
+                app:layout_constraintEnd_toEndOf="@id/tv_sp_armath"
+                app:layout_constraintStart_toStartOf="@id/tv_sp_armath"
+                android:layout_marginTop="16dp"
+                />
+
+            <ImageView
+                android:id="@+id/img_facebook"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                tools:srcCompat="@tools:sample/avatars" />
 
 
-            -->
+            <ImageView
+                android:id="@+id/img_insta"
+                android:layout_width="40dp"
+                android:layout_height="56dp"
+                tools:srcCompat="@tools:sample/avatars"
+                tools:ignore="MissingConstraints"
+                />
+
+            <androidx.constraintlayout.helper.widget.Flow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/tv_social"
+                app:layout_constraintStart_toStartOf="@id/tv_social"
+                app:layout_constraintEnd_toEndOf="@id/tv_social"
+                android:layout_marginTop="8dp"
+                app:flow_horizontalGap="8dp"
+                app:constraint_referenced_ids="img_facebook, img_insta"
+                />
+
+
+
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </ScrollView>

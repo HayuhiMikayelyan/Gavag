@@ -11,4 +11,9 @@
     <string name="nearest_events">Nearest events</string>
     <string name="attempts_this_session">Attempts | This session</string>
     <string name="not_entered_this_session">Not entered | This session</string>
+    <string name="attempts_total">Attempts | Total</string>
+    <string name="not_entered_total">Not entered | Total</string>
+    <string name="gavag_lab_2021_2022">Gavag Lab. ⓒ 2021-2022</string>
+    <string name="sponsored_by_armath">SPONSORED BY ARMATH</string>
+    <string name="social_media">Social Media:</string>
 </resources>
