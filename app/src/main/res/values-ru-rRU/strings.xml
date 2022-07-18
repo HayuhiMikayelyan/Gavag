@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="state">Состояние</string>
+    <string name="on">Вкл</string>
+    <string name="off">Выкл</string>
+    <string name="settings">Настройки</string>
+    <string name="nearestEvents">Ближайшие события</string>
+    <string name="maskAccess">Вход с маской</string>
+    <string name="qrAccess">Вход QR кодом</string>
+    <string name="saveUnmaskedPeople">Сохранить картинки людей без маски</string>
+    <string name="saveFakeQRPhotos">Сохранить картинки с неверным QR кодом</string>
+    <string name="notEnteredSession">Не пройденные | За сессию</string>
+    <string name="attemptsSession">Попытки пройти | За сессию</string>
+    <string name="notEnteredTotal">Не пройденные | За всё время</string>
+    <string name="attemptsTotal">Попытки пройти | За всё время</string>
+    <string name="image">Картинка</string>
+    <string name="info">Информация</string>
+</resources>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="state">Կարգավիճակ</string>
+    <string name="on">Միացված</string>
+    <string name="off">Անջատված</string>
+    <string name="settings">Կարգավորումներ</string>
+    <string name="nearestEvents">Մոտակա միջոցառումներ</string>
+    <string name="maskAccess">Մուտք դիմակով</string>
+    <string name="qrAccess">Մուտք QR կոդով</string>
+    <string name="saveUnmaskedPeople">Պահպանել առանց դիմակ մարդկանց լուսանկարները</string>
+    <string name="saveFakeQRPhotos">Պահպանել սխալ QR ցույց տվողների լուսանկարները</string>
+    <string name="notEnteredSession">Ներս չթողնված | Սեսիայի ընթացքում</string>
+    <string name="attemptsSession">Մուտք գործելու փորձեր | Սեսիայի ընթացքում</string>
+    <string name="notEnteredTotal">Ներս չթողնված | Ամբողջ ընթացքում</string>
+    <string name="attemptsTotal">Մուտք գործելու փորձեր | Ամբողջ ընթացքում</string>
+    <string name="image">Լուսանկար</string>
+    <string name="info">Տեղեկություն</string>
+</resources>

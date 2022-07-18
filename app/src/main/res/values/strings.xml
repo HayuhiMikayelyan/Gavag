@@ -1,19 +1,25 @@
 <resources>
-    <string name="app_name">Gavag</string>
+    <string name="app_name" translatable="false">Gavag</string>
+
+    <string name="gavag_lab_2021_2022" translatable="false">Gavag Lab. ⓒ 2021-2022</string>
+    <string name="sponsored_by_armath" translatable="false">SPONSORED BY ARMATH</string>
+    <string name="social_media" translatable="false">Social Media:</string>
+
     <string name="state">State</string>
     <string name="on">On</string>
     <string name="off">Off</string>
     <string name="settings">Settings</string>
-    <string name="mask">Mask access</string>
-    <string name="qr_access">QR access</string>
-    <string name="save_fake_qr_photos">Save fake QR photos</string>
-    <string name="save_unmasked_people_s_photos">Save unmasked people\'s photos</string>
-    <string name="nearest_events">Nearest events</string>
-    <string name="attempts_this_session">Attempts | This session</string>
-    <string name="not_entered_this_session">Not entered | This session</string>
-    <string name="attempts_total">Attempts | Total</string>
-    <string name="not_entered_total">Not entered | Total</string>
-    <string name="gavag_lab_2021_2022">Gavag Lab. ⓒ 2021-2022</string>
-    <string name="sponsored_by_armath">SPONSORED BY ARMATH</string>
-    <string name="social_media">Social Media:</string>
+    <string name="nearestEvents">Nearest events</string>
+    <string name="maskAccess">Mask access</string>
+    <string name="qrAccess">QR access</string>
+    <string name="saveUnmaskedPeople">Save unmasked people\'s photos</string>
+    <string name="saveFakeQRPhotos">Save fake QR photos</string>
+    <string name="notEnteredSession">Not entered | This session</string>
+    <string name="attemptsSession">Attempts | This session</string>
+    <string name="notEnteredTotal">Not entered | Total</string>
+    <string name="attemptsTotal">Attempts | Total</string>
+    <string name="image">Image</string>
+    <string name="info">Info</string>
+
+
 </resources>
